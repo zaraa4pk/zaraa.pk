@@ -1,138 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Zaraa.pk – Coming Soon</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{background:#0f0f14;color:#fff}
-header{
-  min-height:100vh;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),url('https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&q=80');
-  background-size:cover;
-  background-position:center;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-  padding:20px;
-}
-.logo{
-  font-size:48px;
-  font-weight:700;
-  letter-spacing:2px;
-}
-.tagline{
-  margin-top:10px;
-  font-size:18px;
-  color:#f5c26b;
-}
-.coming{
-  margin-top:30px;
-  font-size:26px;
-  font-weight:600;
-}
-.countdown{
-  display:flex;
-  gap:20px;
-  margin-top:20px;
-}
-.box{
-  background:#1c1c24;
-  padding:15px 20px;
-  border-radius:10px;
-  min-width:80px;
-}
-.box h2{color:#f5c26b}
-section{
-  padding:60px 20px;
-  max-width:1200px;
-  margin:auto;
-}
-h2.section-title{
-  text-align:center;
-  margin-bottom:40px;
-  font-size:32px;
-}
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:25px;
-}
-.card{
-  background:#1c1c24;
-  padding:25px;
-  border-radius:16px;
-  text-align:center;
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 20px 40px rgba(0,0,0,.4);
-}
-.card h3{
-  margin-top:15px;
-  color:#f5c26b;
-}
-footer{
-  text-align:center;
-  padding:30px;
-  background:#08080c;
-  color:#aaa;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>zaraa.pk – Fashion & Style</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --black:#0f0f14;
+      --gold:#d4af37;
+      --purple:#6b4eff;
+      --light:#f7f7fb;
+    }
+    *{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+    body{background:var(--light);color:#222}
+    header{background:linear-gradient(135deg,var(--black),#1c1c2b);padding:24px 60px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-size:28px;font-weight:700;color:var(--gold)}
+    nav a{color:#fff;margin-left:28px;text-decoration:none;font-weight:500}
+    nav a:hover{color:var(--gold)}
+
+    .hero{padding:90px 60px;background:radial-gradient(circle at top right,#7a5cff,transparent 40%),#0f0f14;color:#fff}
+    .hero h1{font-size:52px;font-weight:700;max-width:700px}
+    .hero p{margin-top:20px;font-size:18px;max-width:520px;opacity:.9}
+    .hero button{margin-top:30px;padding:14px 34px;border:none;border-radius:40px;background:var(--gold);font-size:16px;font-weight:600;cursor:pointer}
+
+    .categories{padding:80px 60px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+    .card{background:#fff;border-radius:22px;padding:30px;box-shadow:0 15px 40px rgba(0,0,0,.08);text-align:center}
+    .card h3{margin-top:16px;font-size:20px}
+    .card span{color:#777;font-size:14px}
+
+    .products{padding:80px 60px;background:#fff}
+    .products h2{text-align:center;font-size:36px;margin-bottom:50px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px}
+    .product{background:#f9f9fd;border-radius:18px;padding:20px;text-align:center}
+    .product img{width:100%;border-radius:14px}
+    .product h4{margin:14px 0 6px}
+    .product button{margin-top:10px;padding:10px 20px;border:none;border-radius:20px;background:var(--purple);color:#fff;cursor:pointer}
+
+    footer{background:#0f0f14;color:#bbb;padding:40px 60px;margin-top:80px}
+    footer .brand{color:var(--gold);font-weight:700;font-size:20px}
+    footer p{margin-top:10px;font-size:14px;max-width:400px}
+  </style>
 </head>
 <body>
 
 <header>
-  <div class="logo">Zaraa.pk</div>
-  <div class="tagline">Your Style. Your Store.</div>
-  <div class="coming">Luxury Shopping – Coming Soon</div>
-
-  <div class="countdown">
-    <div class="box"><h2 id="d">00</h2><p>Days</p></div>
-    <div class="box"><h2 id="h">00</h2><p>Hours</p></div>
-    <div class="box"><h2 id="m">00</h2><p>Min</p></div>
-    <div class="box"><h2 id="s">00</h2><p>Sec</p></div>
-  </div>
+  <div class="logo">zaraa.pk</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Shop</a>
+    <a href="#">Categories</a>
+    <a href="#">Contact</a>
+  </nav>
 </header>
 
-<section>
-  <h2 class="section-title">Everything in One Place</h2>
+<section class="hero">
+  <h1>Fashion, Jewelry & Accessories – All in One Place</h1>
+  <p>Discover premium clothing, bags, shoes, watches, jewelry and accessories curated for modern style.</p>
+  <button>Start Shopping</button>
+</section>
+
+<section class="categories">
+  <div class="card"><h3>Clothing</h3><span>Men • Women • Kids</span></div>
+  <div class="card"><h3>Bags</h3><span>Handbags • Backpacks</span></div>
+  <div class="card"><h3>Shoes</h3><span>Sneakers • Formal</span></div>
+  <div class="card"><h3>Watches</h3><span>Luxury • Casual</span></div>
+  <div class="card"><h3>Jewelry</h3><span>Rings • Necklaces</span></div>
+  <div class="card"><h3>Accessories</h3><span>Belts • Sunglasses</span></div>
+</section>
+
+<section class="products">
+  <h2>Trending Products</h2>
   <div class="grid">
-    <div class="card"><h3>Men’s Fashion</h3><p>Suits, Shirts, Jackets</p></div>
-    <div class="card"><h3>Women’s Fashion</h3><p>Luxury Suits, Dresses, Abayas</p></div>
-    <div class="card"><h3>Jewelry</h3><p>Necklaces, Rings, Bangles</p></div>
-    <div class="card"><h3>Bags</h3><p>Handbags & Travel Bags</p></div>
-    <div class="card"><h3>Shoes</h3><p>Men & Women Footwear</p></div>
-    <div class="card"><h3>Watches</h3><p>Premium Timepieces</p></div>
-    <div class="card"><h3>Beauty</h3><p>Perfumes & Skincare</p></div>
-    <div class="card"><h3>Accessories</h3><p>Wallets, Belts & More</p></div>
+    <div class="product"><img src="https://via.placeholder.com/300x220"><h4>Luxury Watch</h4><span>PKR 12,999</span><button>Add to Cart</button></div>
+    <div class="product"><img src="https://via.placeholder.com/300x220"><h4>Designer Bag</h4><span>PKR 8,500</span><button>Add to Cart</button></div>
+    <div class="product"><img src="https://via.placeholder.com/300x220"><h4>Gold Ring</h4><span>PKR 22,000</span><button>Add to Cart</button></div>
+    <div class="product"><img src="https://via.placeholder.com/300x220"><h4>Stylish Sneakers</h4><span>PKR 6,999</span><button>Add to Cart</button></div>
   </div>
 </section>
 
 <footer>
-  © 2026 Zaraa.pk – Pakistan’s Next Luxury Brand
+  <div class="brand">zaraa.pk</div>
+  <p>zaraa.pk is a modern Pakistani fashion & lifestyle marketplace offering premium quality products with trusted service.</p>
 </footer>
-
-<script>
-const launchDate = new Date();
-launchDate.setDate(launchDate.getDate() + 15); // 15 دن بعد لانچ
-
-function update(){
-  const now = new Date().getTime();
-  const d = launchDate - now;
-  if(d < 0) return;
-  document.getElementById("d").innerText = Math.floor(d/(1000*60*60*24));
-  document.getElementById("h").innerText = Math.floor((d%(1000*60*60*24))/(1000*60*60));
-  document.getElementById("m").innerText = Math.floor((d%(1000*60*60))/(1000*60));
-  document.getElementById("s").innerText = Math.floor((d%(1000*60))/1000);
-}
-setInterval(update,1000);
-</script>
 
 </body>
 </html>
